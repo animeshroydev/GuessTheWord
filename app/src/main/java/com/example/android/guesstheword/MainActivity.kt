@@ -18,16 +18,20 @@ package com.example.android.guesstheword
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import com.example.android.guesstheword.databinding.MainActivityBinding
+
 
 /**
  * Creates an Activity that hosts all of the fragments in the app
  */
 class MainActivity : AppCompatActivity() {
 
+    lateinit var binding: MainActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
+        binding = DataBindingUtil.setContentView(this, R.layout.main_activity)
     }
 
 }
